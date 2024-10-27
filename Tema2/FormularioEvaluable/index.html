@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formularios HTML5 con restricciones</title>
+    </head>
+    <body>
+        <!-- 1. Campo de entrada que sólo puede contener tres letras -->
+        <form>
+            <label for="three-letters">Ingrese tres letras (sin números ni
+                caracteres especiales):</label>
+            <input type="text" id="three-letters" name="three-letters"
+                pattern="[a-zA-Z]{3}" title="Sólo 3 letras" required>
+            <br><br>
+            <!-- 2. Campo contraseña de 6 o más caracteres -->
+            <label for="password-6">Ingrese una contraseña de al menos 6
+                caracteres:</label>
+            <input type="password" id="password-6" name="password-6"
+                minlength="6" required>
+                <br><br>
+
+            <!-- 3. Nombre de usuario, sólo letras minúsculas y opcionalmente hasta dos dígitos al final, entre 5 y 12 caracteres -->
+
+            <label for="username">Ingrese un nombre de usuario (letras
+                minúsculas, opcionalmente 2 dígitos al final):</label>
+            <input type="text" id="username" name="username"
+                pattern="[a-z]{3,10}[0-9]{0,2}"
+                title="Debe tener entre 5 y 12 caracteres y puede incluir hasta 2 dígitos al final"
+                required>
+                <br><br>
+
+            <!-- 4. Contraseña con letras mayúsculas, minúsculas, números y caracteres especiales (!?-), entre 8 y 12 caracteres -->
+
+            <label for="password-special">Ingrese una contraseña (letras,
+                números y ! ? -):</label>
+            <input type="password" id="password-special" name="password-special"
+                pattern="[A-Za-z0-9!?-]{8,12}"
+                title="Debe contener entre 8 y 12 caracteres, y sólo puede incluir letras, números y los caracteres !?-."
+                required>
+                <br><br>
+
+            <!-- 5. Nombre de usuario obligatorio, entre 5 y 40 caracteres, sólo letras y números -->
+
+            <label for="username-required">Nombre de usuario (5-40 caracteres,
+                letras y números):</label>
+            <input type="text" id="username-required" name="username-required"
+                pattern="[A-Za-z0-9]{5,40}"
+                title="Debe contener entre 5 y 40 caracteres, y sólo puede incluir letras y números"
+                required>
+                <br><br>
+
+            <!-- 6. Modelo de coche (A1, A3, A4 o A15) -->
+            <label for="car-model">Modelo de coche (A1, A3, A4, A15):</label>
+            <input type="text" id="car-model" name="car-model"
+                pattern="A(1|3|4|15)"
+                title="Debe ser uno de los siguientes modelos: A1, A3, A4 o A15"
+                required>
+                <br><br>
+
+            <!-- 7. Patente de auto (3 letras seguidas de 3 números) -->
+            <label for="car-patent">Ingrese la patente del auto
+                (XXX-123):</label>
+            <input type="text" id="car-patent" name="car-patent"
+                pattern="[A-Za-z]{3}[0-9]{3}"
+                title="Debe tener 3 letras seguidas de 3 números" required>
+                <br><br>
+
+            <!-- 8. URL que comienza con http o https -->
+
+            <label for="url">Ingrese una URL (http:// o https://):</label>
+            <input type="url" id="url" name="url" pattern="https?:\/\/.+"
+                title="Debe comenzar con http:// o https:// y tener al menos un carácter después de //"
+                required>
+                <br><br>
+
+            <!-- 9. Número entero positivo -->
+
+            <label for="positive-number">Ingrese un número entero
+                positivo:</label>
+            <input type="number" id="positive-number" name="positive-number"
+                min="1" step="1" required>
+                <br><br>
+
+            <!-- 10. Dirección de correo válida -->
+
+            <label for="email">Ingrese una dirección de correo válida:</label>
+            <input type="email" id="email" name="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                title="Debe ser una dirección de correo válida" required>
+                <br><br>
+
+            <!-- 11. Código postal válido (5 dígitos) -->
+
+            <label for="postal-code">Ingrese un código postal (5
+                dígitos):</label>
+            <input type="text" id="postal-code" name="postal-code"
+                pattern="\d{5}" title="Debe ser un código postal de 5 dígitos"
+                required>
+                <br><br>
+
+            <!-- 12. Fecha en formato DD/MM/AAAA -->
+            <label for="date">Ingrese una fecha (DD/MM/AAAA):</label>
+            <input type="text" id="date" name="date" pattern="\d{2}/\d{2}/\d{4}"
+                title="Debe ser una fecha en formato DD/MM/AAAA" required>
+                <br><br>
+
+            <!-- 13. Número de teléfono válido (9 dígitos) -->
+
+            <label for="phone">Ingrese un número de teléfono (9
+                dígitos):</label>
+            <input type="tel" id="phone" name="phone" pattern="\d{9}"
+                title="Debe ser un número de teléfono válido de 9 dígitos"
+                required>
+                <br><br>
+
+            <!-- 14. Contraseña segura (mínimo 8 caracteres, al menos una mayúscula y un número) -->
+            <label for="secure-password">Ingrese una contraseña segura (al menos
+                8 caracteres, una mayúscula y un número):</label>
+            <input type="password" id="secure-password" name="secure-password"
+                pattern="(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}"
+                title="Debe tener al menos 8 caracteres, una letra mayúscula y un número"
+                required>
+                <br><br>
+
+            <!-- 15. Número de tarjeta de crédito válido (XXXX-XXXX-XXXX-XXXX) -->
+            <label for="credit-card">Ingrese un número de tarjeta de crédito
+                (formato XXXX-XXXX-XXXX-XXXX):</label>
+            <input type="text" id="credit-card" name="credit-card"
+                pattern="\d{4}-\d{4}-\d{4}-\d{4}"
+                title="Debe ser un número de tarjeta válido (XXXX-XXXX-XXXX-XXXX)"
+                required>
+                <br><br>
+
+            <!-- 16. Código de país válido (2 letras mayúsculas) -->
+            <label for="country-code">Ingrese un código de país (2 letras
+                mayúsculas):</label>
+            <input type="text" id="country-code" name="country-code"
+                pattern="[A-Z]{2}"
+                title="Debe ser un código de país válido de 2 letras mayúsculas"
+                required>
+                <br><br>
+
+            <!-- 17. Hora válida en formato HH:MM -->
+            <label for="time">Ingrese una hora válida (HH:MM):</label>
+            <input type="time" id="time" name="time" required>
+            <br><br>
+
+            <!-- 18. Código de producto (XX-9999) -->
+            <label for="product-code">Ingrese un código de producto (formato
+                XX-9999):</label>
+            <input type="text" id="product-code" name="product-code"
+                pattern="[A-Za-z]{2}-\d{4}"
+                title="Debe ser un código de producto válido (XX-9999)"
+                required>
+                <br><br>
+
+            <!-- 19. Código de descuento válido (6 caracteres alfanuméricos) -->
+            <label for="discount-code">Ingrese un código de descuento (6
+                caracteres alfanuméricos):</label>
+            <input type="text" id="discount-code" name="discount-code"
+                pattern="[A-Za-z0-9]{6}"
+                title="Debe ser un código de descuento válido de 6 caracteres alfanuméricos"
+                required>
+                <br><br>
+                <button type="submit">Enviar</button>
+
+        </form>
+
+    </body>
+</html>

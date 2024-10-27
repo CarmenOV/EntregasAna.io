@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario ana </title>
+</head>
+<body>
+    <h1>Formulario en HTML5</h1>
+    <h4>Profesora: Ana Fuentes </h4>
+    <form action="">
+        <label for="Nombre">Tu Nombre (*)</label><br>
+        <input type="text" required>
+        <br><br>
+
+        <label for="Correo">Correo electronico:(*)</label><br>
+        <input type="text" required placeholder="usuariio@dominio.com">
+        <br><br>
+
+        <label for="contrasena">Contraseña :(*)</label><br>
+        <input type="text " required>
+        <br><br>
+
+        <label for="fnacimiento">Fecha Nacimiento:</label><br>
+        <input type="date">
+        <br><br>
+
+        <label for="hora">Que hora es </label>
+        <input type="time">
+        <br><br>
+
+        <label for="mes">en que mes estamos</label>
+        <input type="month">
+        <br><br>
+
+        <label for="profe">Selecciona tu personaje favorito</label><br>
+        <input type="radio" name="profe1" value="profe1">Profe 1 <br>
+        <input type="radio" name="profe2" value="profe2">Profe 2 <br>
+        <input type="radio" name="profe3" value="profe3">Profe 3 <br>
+        <input type="radio" name="profe4" value="profe4">Profe 4 <br>
+        <input type="radio" name="profe5" value="profe5">Profe 5 <br>
+         
+        <br><br>
+        <label for="personaje">Selecciona tu personaje favorito </label><br>
+        <select name="personaje" id="personaje">
+            <option value="prof1">prof1</option>
+            <option value="prof2">prof2</option>
+            <option value="prof3">prof3</option>
+            <option value="prof4">prof4</option>
+        </select>
+        <br><br>
+        <label for="fila">Cuantos libros lees a la semana </label><br>
+        <input type="range" style="color: blue;">
+
+        <br><br>
+        <label for="color">Elige un color</label><br>
+        <input type="color">
+
+        <br><br>
+        <label for="paginas">cuantas paginas lees al dia</label><br>
+        <input type="number">
+
+        <br><br>
+        <label for="lista">Descuentos:</label><br>
+        <input type="checkbox" name="FamiliaNumerosa" value="1">Familia numerosa  <br>
+        <input type="checkbox" name="FamiliaNumerosa" value="1">Familia numerosa <br>
+        <input type="checkbox" name="FamiliaNumerosa" value="1">Familia numerosa <br>
+
+        <br><br>
+        <label>Elije el archivo </label> 
+        <input type="submit" value="SUBIR ARCHIVO ">
+
+        <BR><BR></BR></BR>
+
+        <progress id="file" max="100" value="70">70%</progress>
+
+
+        <br><br>
+        <input type="submit" value="Enviar datos">
+        <input type="reset" value="Resetear">
+
+
+    </form>
+    
+</body>
+</html>
