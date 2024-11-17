@@ -1,0 +1,96 @@
+/* Estilo General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  section {
+    max-width: 900px; /* Ajustar ancho general */
+    margin: auto;
+    padding: 20px 0;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    margin: 0 0 20px;
+    text-align: left;
+    position: relative;
+  }
+  
+  h1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: red;
+    margin-top: 10px;
+  }
+  .grid-container {
+    display: grid;
+    gap: 10px; /* Espacio entre las imágenes */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Ajusta automáticamente las columnas */
+    grid-auto-rows: 150px; /* Altura base de las filas */
+    grid-auto-flow: dense; /* Permite que los elementos llenen los huecos disponibles */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Configurar diferentes tamaños de imágenes */
+  .image-container:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .image-container:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .image-container:nth-child(3) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
+  .image-container:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+  
+  .image-container:nth-child(5) {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+  
+  .image-container:nth-child(6) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
+  .image-container:nth-child(7) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .image-container:nth-child(8) {
+    grid-column: span 2;
+    grid-row: span 1; 
+  }
+  
+  .image-container:nth-child(9) {
+    grid-column: span 6; 
+    grid-row: span 2;
+  }

@@ -1,0 +1,51 @@
+/* Estilo General */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  section {
+    max-width: 1200px; /* Ancho máximo del contenedor principal */
+    margin: auto; /* Centrar sección en la página */
+    padding: 20px 0; /* Espaciado vertical */
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    margin: 0 0 20px; /* Espaciado inferior */
+    text-align: left; /* Alinear el texto a la izquierda */
+    position: relative;
+  }
+  
+  h1::after {
+    content: '';
+    display: block;
+    width: 10%; /* Ancho del subrayado igual al contenedor */
+    height: 3px;
+    background: red;
+    margin: 10px 0 0;
+  }
+  
+  /* Galería */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 15px; /* Espaciado entre imágenes */
+    max-width: 100%; /* La galería usa el mismo ancho que el contenedor */
+  }
+  
+  /* Contenedor de imagen */
+  .image-container {
+    overflow: hidden; /* Asegurar que la imagen no se salga del contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  /* Imágenes */
+  .image-container img {
+    width: 100%; /* La imagen ocupa el ancho completo del contenedor */
+    height: 150px; /* Altura fija */
+    object-fit: cover; /* Ajustar imagen sin distorsionarla */
+  }
+  

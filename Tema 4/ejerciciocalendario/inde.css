@@ -1,0 +1,59 @@
+/* styles.css */
+
+h1 {
+    display: grid;
+    place-items: center;
+    color: rgb(161, 160, 160);
+    text-align: center;
+    margin: 0; /* Eliminar margen por defecto */
+    padding-bottom: 0; /* Eliminar espacio inferior */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center; /* Centrar el calendario en la pantalla usando Grid */
+    height: 10vh;
+}
+
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Dividir en 7 columnas iguales */
+    width: 850px; /* Ancho del calendario */
+}
+
+/* Línea horizontal */
+.hr-line {
+    grid-column: span 7; /* La línea ocupa las 7 columnas */
+    height: 2px; /* Grosor de la línea */
+}
+
+/* Encabezados de los días de la semana */
+.header {
+    background-color: white;
+    color: gray;
+    text-align: center;
+    padding: 10px 0; /* Espaciado ajustado en los encabezados */
+    font-weight: bold;
+    font-size: 1rem; /* Tamaño del texto más pequeño */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para los días */
+.dia {
+    background-color: white;
+    color: gray;
+    display: grid;
+    place-items: flex-start center; /* Centrar el número dentro de la celda en la parte superior izquierda */
+    padding: 5px; /* Espaciado pequeño */
+    font-size: 0.9rem; /* Tamaño de texto reducido */
+    border-top: 1px solid gray; /* Línea divisoria solo en la parte superior */
+    border-bottom: 1px solid gray; /* Línea divisoria solo en la parte inferior */
+    border-right: 1px solid gray; /* Borde derecho por defecto */
+}
+
