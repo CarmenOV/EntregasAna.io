@@ -1,0 +1,50 @@
+* {
+    margin: 80;
+    padding: 80;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: grid;
+  }
+  
+  #imagen {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 5fr;
+    height: 50vh;
+    width: 90vw;
+  }
+  
+  #imagen img {
+    grid-column: 1/-1;
+    grid-row: 1;
+    width: 50%;
+    height: 100%;
+  }
+  
+  #texto {
+    grid-column: 3/4;
+    grid-row: 1;
+    background-color: rgba(0, 0, 255);
+    color: white;
+    text-align: center;
+    height: 250px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    align-self: center; 
+  }
+  
+  #boton {
+    background-color: white;
+    color: blue;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
