@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Fondo neutro para resaltar el contenedor */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1rem;
+    max-width: 800px;
+    padding: 2rem;
+    margin: 2rem auto;  
+    background: 
+        linear-gradient(120deg, white 50%, purple 50%); /* Fondo diagonal biselado: blanco primero, luego morado */
+    border-radius: 10px; /* Bordes redondeados para diseño elegante */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para separar visualmente */
+}
+
+.form-container {
+    grid-column: 1; 
+}
+
+.image-container {
+    grid-column: 2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.form-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+input, textarea, button {
+    width: 100%; 
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
