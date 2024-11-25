@@ -1,0 +1,21 @@
+.clip{
+    background-color: palevioletred;
+    width: 400px;
+    height: 400px;
+    /* codigo para los circulos  */
+    /* clip-path: circle(50% at 50% 50%); */
+
+    /* codigo para los cuadrados para recortarlos */
+    /* clip-path: inset(20% 20% 20% 20% round 20px); */
+
+    /* codigo para los poligonos */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+    /* codigo para los rectangulos */
+    /* clip-path: rect(50px 50px 150px 150px); */
+
+    /* codigo apara la exlipse*/
+    /* clip-path: ellipse(50% 40% at 50% 50%); */
+
+
+}

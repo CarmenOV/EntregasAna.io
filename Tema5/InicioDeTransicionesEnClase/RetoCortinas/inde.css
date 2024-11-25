@@ -1,0 +1,40 @@
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+    border-top: 10px solid transparent;
+    position: relative;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  nav li {
+    margin: 0 10px;
+    position: relative;
+  }
+
+  li:nth-child(1)::before {
+    background-color: rgb(77, 255, 77);
+  }
+  
+   li:nth-child(2)::before {
+    background-color: green;
+  }
+  
+   li:nth-child(3)::before {
+    background-color: blue;
+  }
+  
+   li:nth-child(4)::before {
+    background-color: red;
+  }
+  

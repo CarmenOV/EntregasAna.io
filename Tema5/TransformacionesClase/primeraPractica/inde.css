@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 400vh;
+}
+
+.container{
+    outline: 2px solid red;
+    height: 500px;
+    width: 80%;
+    margin: 60px;
+}
+
+.element{
+    width: 150px;
+    background-color: rgb(110, 110, 184);
+    height: 150px;
+    color: wheat;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* transform: translateX(300px); */
+    /* si le pones -50 se mueve al otro lao  */
+
+    /* transform: translateY(-50px); */
+    /* se le sube a -50 */
+    /* transform: translate(50px, 50px); */
+
+    /* transition: transform 1s ease; */
+
+    /* transform: rotate(0.5turn); */
+
+    /* transform: rotate(20deg); */
+
+
+     
+    transition: transform 1s ease;
+
+}
+
+.element:hover{
+    /* transform: translate(300px); */
+    transform: rotate(300deg) scale(3);    
+
+}

@@ -1,0 +1,119 @@
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.caja{
+    width: 180px;
+    height: 180px;
+    background-color: #30b037;
+    color: white;
+    text-align: center;
+    line-height: 180px;
+    margin: 15px;
+    font-size: 18px;
+    font-family: arial;
+
+}
+
+/* la primera transicion es para que al hacer un hover el cambio no sea tan brusco, si le pones linear es mas suave y a la misma vez*/
+.caja1{
+    background-color: #c0392c;
+    transition: background-color 1s linear;
+}
+.caja1:hover{
+    background-color: #3f51b5;
+}
+
+
+/* esta transicion hace que el cambio sea primero lento rapido y luego lento otra vez rapido, por lo que se va cmabiando gradualmente  */
+.caja2{
+    background-color: #9b599b;
+    transition: font-size 1s ease;
+}
+.caja2:hover{
+    font-size: 20px;
+}
+
+
+/* para que cuando pases el mouse por encima se cambie el color, de forma lenta o rapida dependiendo de los segundos que le des */
+.caja3{
+    background-color: #2c4fc0;
+    transition: color 1s ease-in-out;
+}
+.caja3:hover{
+    color: #000000;
+}
+
+/* cuando apsas por el el texto se desplaza de arriba hacia abajo */
+.caja4{
+    background-color: #be1556;
+    transition: line-height 1s ease-in-out;
+}
+.caja4:hover{
+   line-height: 300px ;
+}
+
+
+/*cuando pasas por encima de la caja cambia su borde y se hace mas radius dependiendo de lo que le vayas añadiendo   */
+.caja5{
+    background-color: #9b59b6;
+    transition: border-radius 1s ease-in-out;
+}
+.caja5:hover{
+    border-radius: 50px;
+}
+
+
+
+/* cuando pasas por encima, cambia su sombra, conforme l vas añadiendo mas px se van haciendo mas grandes y moviendo para abajo y arriba */
+.caja6{
+    background-color: #2bc0a0;
+    transition: box-shadow 1s linear;
+}
+.caja6:hover{
+    box-shadow: 10px 10px 14px 2px rgb(0, 0, 0, 0.47);
+}
+
+
+
+/* cuando pasas por encima cambia su opacidad */
+.caja7{
+    background-color: #92f70e9d;
+    transition: opacity 1s ease;
+}
+.caja7:hover{
+    opacity: 0.2;
+}
+
+
+
+/* cuando pasas por encima se genera un borde grande  */
+.caja8{
+    background-color: #352bc0;
+    transition: border 1s ease-in;
+}
+.caja8:hover{
+    border-style: solid;
+    border-color: black;
+}
+
+
+/* cada vez que pasas, se le aplica el margin que se mueve  */
+.caja9{
+    background-color: #025c48;
+    transition: margin 1s ease;
+}
+.caja9:hover{
+    margin: 50px;
+}
+
+
+
+/* cuando pasas por encima cambia el padding */
+.caja10{
+    background-color: #2bc0a0;
+    transition: padding 1s linear;
+}
+.caja10:hover{
+    padding: 50px;
+}
