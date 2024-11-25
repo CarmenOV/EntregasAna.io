@@ -19,14 +19,7 @@ body {
     position: relative;
   }
   
-  h1::after {
-    content: '';
-    display: block;
-    width: 10%; /* Ancho del subrayado igual al contenedor */
-    height: 3px;
-    background: red;
-    margin: 10px 0 0;
-  }
+ 
   
   /* Galería */
   .gallery {
