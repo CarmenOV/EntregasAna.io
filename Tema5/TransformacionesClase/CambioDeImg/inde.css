@@ -1,0 +1,43 @@
+
+.flip-card{
+    border: thick solid black;
+    margin : 0 auto ;
+    margin-bottom: 80px;
+    width: 600px;
+    height: 409px;
+    position: relative;
+    cursor: pointer;
+
+    perspective: 10rem;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+
+}
+
+
+
+.flip-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-face{
+    position: absolute;
+
+    backface-visibility: hidden;
+}
+
+.flip-front{
+    transform: rotateY(0deg);
+}
+
+.flip-back{
+    transform: rotateY(180deg);
+}
+
+.flip-card:hover{
+    transform: rotateY(180deg);
+}
+
+/*  Si cambias llos Y por los X se cambian al reves  */

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmobiliaria Carmen Ortega</title>
+    <link rel="stylesheet" href="inde.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header class="encabezado">
+        <a href="index.html" class="encabezado__titulo"><h1>Inmobiliaria Carmen Ortega</h1></a>
+        <p class="encabezado__subtitulo">Encuentra tu hogar ideal con nosotros</p>
+        <div class="servicios__botones">
+            <a href="compra.html" class="servicio__boton"><i class="fas fa-home"></i> Comprar Propiedades</a>
+            <a href="asesoria.html" class="servicio__boton"><i class="fas fa-user-tie"></i> Asesoría Inmobiliaria</a>
+            <a href="alquileres.html" class="servicio__boton"><i class="fas fa-building"></i> Propiedades en Alquiler</a>
+          <a href="#contacto" class="servicio__boton"><i class="fas fa-phone-alt"></i> Contáctanos"></a>
+        </div>
+    </header>
+
+    <!-- Sección de propiedades en venta -->
+    <section class="propiedades" id="propiedades">
+        <h2 class="propiedades__titulo">Nuestras Propiedades en Venta</h2>
+        <div class="propiedades__galeria">
+            <div class="propiedad propiedades__item">
+                <img src="img/22d0718d-339c-43ca-bf61-a1bbe7647bc0.webp" alt="Casa en la ciudad" class="propiedad__imagen">
+                <p class="propiedad__nombre">Casa en la ciudad</p>
+                <p class="propiedad__precio">Precio: $200,000</p>
+            </div>
+            <div class="propiedad propiedades__item">
+                <img src="img/394f55b7-b675-421b-8e6d-09c366da21b8.webp" alt="Departamento en el centro" class="propiedad__imagen">
+                <p class="propiedad__nombre">Departamento en el centro</p>
+                <p class="propiedad__precio">Precio: $150,000</p>
+            </div>
+            <div class="propiedad propiedades__item">
+                <img src="img/2ff6d936-c894-49d3-86ee-8bcf4b08eeec.webp" alt="Casa en el campo" class="propiedad__imagen">
+                <p class="propiedad__nombre">Casa en el campo</p>
+                <p class="propiedad__precio">Precio: $250,000</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="nosotros" id="nosotros">
+        <h2 class="nosotros__titulo">Acerca de Nosotros</h2>
+        <p class="nosotros__descripcion">
+            En Inmobiliaria Carmen Ortega, llevamos más de 20 años ayudando a familias, parejas y profesionales a encontrar el espacio perfecto para sus vidas y proyectos. Fundada en el año 2000, nuestra inmobiliaria nació con el objetivo de ofrecer un servicio de excelencia y personalización en el mundo inmobiliario. 
+        </p>
+        <p class="nosotros__descripcion">
+            Con un equipo de asesores expertos y comprometidos, guiamos a nuestros clientes en cada paso del proceso de compra, venta o alquiler, asegurando una experiencia transparente, segura y adaptada a las necesidades individuales de cada cliente. Nos especializamos en propiedades residenciales y comerciales, abarcando desde acogedoras viviendas en la ciudad hasta espacios modernos en el campo.
+        </p>
+        <p class="nosotros__descripcion">
+            Nuestro compromiso es ayudar a nuestros clientes a tomar decisiones informadas y lograr sus objetivos inmobiliarios. Creemos en construir relaciones de confianza a largo plazo y en ofrecer una atención personalizada que nos ha hecho ganar la lealtad de nuestros clientes a lo largo de los años.
+        </p>
+        <p class="nosotros__descripcion">
+            Además, estamos comprometidos con el desarrollo sostenible y trabajamos con propiedades que respetan el medio ambiente. Al elegir Inmobiliaria Carmen Ortega, no solo encuentra un lugar para vivir, sino también un equipo de profesionales dedicados a ayudarle a construir un hogar y una inversión para el futuro.
+        </p>
+    </section>
+    <section class="contacto" id="contacto">
+        <h2 class="contacto__titulo">Contacto</h2>
+        <form class="contacto__formulario">
+            <label for="nombre" class="contacto__etiqueta">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" class="contacto__input" required>
+            <label for="correo" class="contacto__etiqueta">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" class="contacto__input" required>
+            <label for="mensaje" class="contacto__etiqueta">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" class="contacto__textarea" required></textarea>
+            <button type="submit" class="contacto__enviar">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="pie">
+        <p class="pie__texto">&copy; 2024 Inmobiliaria Carmen Ortega. Todos los derechos reservados.</p>
+        <div class="pie__redes-sociales">
+            <a href="https://facebook.com" target="_blank" class="pie__icono"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" class="pie__icono"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" class="pie__icono"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="pie__icono"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>

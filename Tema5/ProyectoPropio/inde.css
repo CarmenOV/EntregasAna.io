@@ -1,0 +1,458 @@
+:root {
+    --color-primario: #2E8BC0;
+    --color-secundario: #145DA0;
+    --color-terciario: #FFC107;
+    --color-fondo: #e8f4fc;
+    --color-texto: #333;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f9fd;
+    width: 100%;
+}
+
+/* Encabezado */
+.encabezado {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centra los elementos dentro del encabezado */
+    align-items: center;
+    flex-direction: column; /* Alineación vertical */
+}
+
+.encabezado__titulo {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Quitar subrayado y color, dejar solo el hover */
+.encabezado__titulo a {
+    color: white;  /* Establece el color del enlace en blanco */
+    text-decoration: none;  /* Elimina el subrayado */
+}
+
+.encabezado__titulo a:hover {
+    color: var(--color-terciario);  /* Color amarillo al pasar el cursor */
+}
+
+.encabezado__subtitulo {
+    margin: 0.5rem 0 2rem 0;
+    font-size: 1.2rem;
+}
+
+/* Contenedor de navegación de botones */
+.encabezado__navegacion {
+    display: flex;
+    justify-content: center;  /* Alinea los botones en el centro */
+    gap: 1rem;  /* Añade separación entre los botones */
+    margin-top: 2rem;
+}
+
+.encabezado__boton, .encabezado__enlace {
+    background-color: var(--color-terciario);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none; /* Evita el subrayado de los enlaces */
+}
+
+/* Efecto hover para todos los botones y enlaces */
+.encabezado__boton:hover, .encabezado__enlace:hover {
+    background-color: var(--color-secundario); /* Cambio de color en hover */
+}
+
+.encabezado__enlace {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.encabezado__enlace:hover {
+    color: var(--color-terciario);  /* Color amarillo en hover */
+}
+
+/* Propiedades (venta y alquiler) */
+.propiedades, .propiedades-alquiler {
+    padding: 2rem 1rem;
+    background-color: var(--color-fondo);
+    text-align: center;
+    width: 80%;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.propiedades__titulo {
+    font-size: 2rem;
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+}
+
+.propiedades__galeria {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.propiedad {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 280px;  /* Contenedor más pequeño */
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    flex: 1 1 280px; /* Flexbox: permite que el contenedor sea flexible */
+}
+
+.propiedad__imagen {
+    width: 100%;
+    height: auto;
+    max-height: 180px;  /* Imagen más pequeña */
+    object-fit: cover;  /* Mantiene la proporción de la imagen */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.propiedad__nombre {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.propiedad__precio {
+    color: var(--color-primario);
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+/* Sección Nosotros */
+.nosotros {
+    padding: 2rem;
+    background-color: #ffffff;
+    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nosotros__titulo {
+    font-size: 2rem;
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+}
+
+.nosotros__descripcion {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Sección Contacto */
+.contacto {
+    padding: 2rem;
+    background-color: var(--color-fondo);
+    text-align: center;
+}
+
+.contacto__titulo {
+    font-size: 2rem;
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+}
+
+.contacto__formulario {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contacto__etiqueta {
+    font-weight: bold;
+    text-align: left;
+}
+
+.contacto__input, .contacto__textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--color-primario);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contacto__textarea {
+    resize: vertical;
+}
+
+.contacto__enviar {
+    padding: 0.75rem;
+    border: none;
+    background-color: var(--color-secundario);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contacto__enviar:hover {
+    background-color: var(--color-terciario);
+}
+
+/* Pie */
+.pie {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.pie__texto {
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.pie__redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.pie__icono {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.pie__icono:hover {
+    color: var(--color-terciario); /* Cambia a amarillo en hover */
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+}
+
+
+/* Enlaces del encabezado */
+.servicio__boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    color: white;
+    background-color: var(--color-secundario);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Efecto de transición */
+}
+
+.servicio__boton:hover {
+    background-color: var(--color-terciario); /* Color amarillo al pasar el cursor */
+}
+
+
+/*compra *//* Estilos para la galería de propiedades */
+.propiedades__galeria {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Estilo para cada propiedad */
+.propiedad {
+    flex: 1 1 30%;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Se reduce el ancho máximo */
+}
+
+/* Estilo para las imágenes de las propiedades */
+.propiedad__imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Estilo para los títulos y precios */
+.propiedad__nombre {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.propiedad__precio {
+    color: green;
+    font-weight: bold;
+}
+
+/* Estilo para el checkbox y el botón de descripción */
+.propiedad__checkbox {
+    display: none;
+}
+
+.propiedad__descripcion-btn {
+    display: block;
+    background-color: #ff9800;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.propiedad__checkbox:checked + .propiedad__descripcion-btn {
+    background-color: #f57c00;
+}
+
+.propiedad__descripcion {
+    display: none;
+    padding: 1rem;
+    background-color: #fff3e0;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.propiedad__checkbox:checked + .propiedad__descripcion-btn + .propiedad__descripcion {
+    display: block;
+}
+
+/* Estilo para el encabezado */
+.encabezado {
+    background-color:var(--color-primario);
+    color: #000;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.encabezado__titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white; /* Título blanco */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Transición para color al pasar el mouse */
+}
+
+.encabezado__titulo:hover {
+    color: #ffeb3b; /* Amarillo al pasar el ratón */
+}
+
+.encabezado__subtitulo {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 1rem;
+}
+
+.servicios__botones {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.servicio__boton, .encabezado__boton {
+    background-color:var(--color-secundario);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.servicio__boton:hover, .encabezado__boton:hover {
+    background-color:var(--color-terciario);
+}
+
+.encabezado__boton {
+    background-color:var(--color-terciario);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Si deseas que el botón de contacto se mantenga en la misma fila */
+.encabezado__boton {
+    background-color:var(--color-terciario);
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.encabezado__boton:hover {
+    background-color:var(--color-terciario);
+}
+
+/* Estilo para la sección de Asesoría Inmobiliaria */
+.asesoria {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.asesoria__titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.asesoria__descripcion {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.asesoria__contacto-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.asesoria__contacto-btn:hover {
+    background-color: #f39c12; /* Un color amarillo para el hover */
+}
+
+
+
+
