@@ -13,47 +13,66 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #f4f9fd;
-    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-/* Encabezado */
 .encabezado {
     background-color: var(--color-primario);
     color: white;
     padding: 2rem;
     text-align: center;
     display: flex;
-    justify-content: center; /* Centra los elementos dentro del encabezado */
+    justify-content: center;
     align-items: center;
-    flex-direction: column; /* Alineación vertical */
+    flex-direction: column;
 }
 
 .encabezado__titulo {
     margin: 0;
     font-size: 2.5rem;
+    color: white;
 }
 
-/* Quitar subrayado y color, dejar solo el hover */
 .encabezado__titulo a {
-    color: white;  /* Establece el color del enlace en blanco */
-    text-decoration: none;  /* Elimina el subrayado */
+    color: white;  
+    text-decoration: none;  
+    transition: transform 0.4s ease, background-color 0.3s ease, color 0.3s ease;
+    padding: 0.25rem 0.5rem;
+    display: inline-block;
 }
 
 .encabezado__titulo a:hover {
-    color: var(--color-terciario);  /* Color amarillo al pasar el cursor */
+    color: white;
+    background-color: var(--color-terciario);
+    transform: rotate(360deg);
+    border-radius: 5px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    transition: transform 2s ease;
+}
+
+h1:hover {
+    transform: rotate(360deg);
 }
 
 .encabezado__subtitulo {
     margin: 0.5rem 0 2rem 0;
     font-size: 1.2rem;
+    color: white;
 }
 
-/* Contenedor de navegación de botones */
 .encabezado__navegacion {
     display: flex;
-    justify-content: center;  /* Alinea los botones en el centro */
-    gap: 1rem;  /* Añade separación entre los botones */
+    justify-content: center;
+    gap: 1rem;
     margin-top: 2rem;
+    color: white;
 }
 
 .encabezado__boton, .encabezado__enlace {
@@ -68,40 +87,48 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    text-decoration: none; /* Evita el subrayado de los enlaces */
+    text-decoration: none;
+    transition: transform 0.4s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Efecto hover para todos los botones y enlaces */
 .encabezado__boton:hover, .encabezado__enlace:hover {
-    background-color: var(--color-secundario); /* Cambio de color en hover */
+    background-color: var(--color-secundario);
+    transform: scale(1.1);
 }
 
-.encabezado__enlace {
+a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    transition: transform 0.4s ease, background-color 0.3s ease, color 0.3s ease;
+    padding: 0.25rem 0.5rem;
+    display: inline-block;
+    position: relative;
 }
 
-.encabezado__enlace:hover {
-    color: var(--color-terciario);  /* Color amarillo en hover */
+a:hover {
+    color: white;
+    background-color: var(--color-terciario);
+    transform: translateX(10px) scale(1.1);
+    border-radius: 5px;
 }
 
-/* Propiedades (venta y alquiler) */
 .propiedades, .propiedades-alquiler {
     padding: 2rem 1rem;
     background-color: var(--color-fondo);
     text-align: center;
-    width: 80%;
-    justify-content: center;
-    margin: 20px auto;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .propiedades__titulo {
     font-size: 2rem;
     color: var(--color-secundario);
     margin-bottom: 1rem;
+    transition: transform 1s ease;
+}
+
+.propiedades__titulo:hover {
+    transform: rotate(360deg);
 }
 
 .propiedades__galeria {
@@ -117,17 +144,22 @@ body {
     padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 280px;  /* Contenedor más pequeño */
+    width: 280px;
     border-radius: 8px;
     margin-bottom: 2rem;
-    flex: 1 1 280px; /* Flexbox: permite que el contenedor sea flexible */
+    flex: 1 1 280px;
+    transition: transform 0.4s ease;
+}
+
+.propiedad:hover {
+    transform: scale(1.05);
 }
 
 .propiedad__imagen {
     width: 100%;
     height: auto;
-    max-height: 180px;  /* Imagen más pequeña */
-    object-fit: cover;  /* Mantiene la proporción de la imagen */
+    max-height: 180px;
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
 }
@@ -144,7 +176,6 @@ body {
     margin: 0.5rem 0;
 }
 
-/* Sección Nosotros */
 .nosotros {
     padding: 2rem;
     background-color: #ffffff;
@@ -153,20 +184,53 @@ body {
     margin: 2rem auto;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 1s ease, clip-path 1s ease, font-size 1s ease, padding 1s ease;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    overflow: hidden;
 }
 
 .nosotros__titulo {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--color-secundario);
     margin-bottom: 1rem;
+    transition: font-size 1s ease, transform 1s ease;
+}
+
+.nosotros__titulo:hover {
+    transform: rotate(360deg);
 }
 
 .nosotros__descripcion {
-    font-size: 1rem;
+    font-size: 0.85rem;
     line-height: 1.6;
+    transition: font-size 1s ease, transform 1s ease;
 }
 
-/* Sección Contacto */
+.nosotros:hover {
+    transform: rotate(360deg);
+    clip-path: circle(50% at 50% 50%);
+    padding: 1rem;
+}
+
+.nosotros:hover .nosotros__titulo {
+    font-size: 1.2rem;
+    transform: scale(0.7);
+}
+
+.nosotros:hover .nosotros__descripcion {
+    font-size: 0.75rem;
+    transform: scale(0.8);
+    line-height: 1.4;
+}
+
+.nosotros:hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .contacto {
     padding: 2rem;
     background-color: var(--color-fondo);
@@ -177,6 +241,11 @@ body {
     font-size: 2rem;
     color: var(--color-secundario);
     margin-bottom: 1rem;
+    transition: transform 1s ease;
+}
+
+.contacto__titulo:hover {
+    transform: rotate(360deg);
 }
 
 .contacto__formulario {
@@ -219,7 +288,6 @@ body {
     background-color: var(--color-terciario);
 }
 
-/* Pie */
 .pie {
     background-color: var(--color-primario);
     color: white;
@@ -249,210 +317,27 @@ body {
 }
 
 .pie__icono:hover {
-    color: var(--color-terciario); /* Cambia a amarillo en hover */
-    transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+    color: var(--color-terciario);
+    transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+    .propiedades__galeria {
+        flex-direction: column;
+    }
 
-/* Enlaces del encabezado */
-.servicio__boton {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 1rem 1.5rem;
-    color: white;
-    background-color: var(--color-secundario);
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease; /* Efecto de transición */
+    .propiedad {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
 }
 
-.servicio__boton:hover {
-    background-color: var(--color-terciario); /* Color amarillo al pasar el cursor */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .propiedades__galeria {
+        flex-direction: row;
+    }
+
+    .propiedad {
+        flex: 1 1 30%;
+    }
 }
-
-
-/*compra *//* Estilos para la galería de propiedades */
-.propiedades__galeria {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-/* Estilo para cada propiedad */
-.propiedad {
-    flex: 1 1 30%;
-    background-color: #f9f9f9;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 300px; /* Se reduce el ancho máximo */
-}
-
-/* Estilo para las imágenes de las propiedades */
-.propiedad__imagen {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-/* Estilo para los títulos y precios */
-.propiedad__nombre {
-    font-weight: bold;
-    margin-top: 1rem;
-}
-
-.propiedad__precio {
-    color: green;
-    font-weight: bold;
-}
-
-/* Estilo para el checkbox y el botón de descripción */
-.propiedad__checkbox {
-    display: none;
-}
-
-.propiedad__descripcion-btn {
-    display: block;
-    background-color: #ff9800;
-    color: white;
-    padding: 0.5rem;
-    text-align: center;
-    margin-top: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.propiedad__checkbox:checked + .propiedad__descripcion-btn {
-    background-color: #f57c00;
-}
-
-.propiedad__descripcion {
-    display: none;
-    padding: 1rem;
-    background-color: #fff3e0;
-    margin-top: 1rem;
-    border-radius: 5px;
-}
-
-.propiedad__checkbox:checked + .propiedad__descripcion-btn + .propiedad__descripcion {
-    display: block;
-}
-
-/* Estilo para el encabezado */
-.encabezado {
-    background-color:var(--color-primario);
-    color: #000;
-    text-align: center;
-    padding: 1rem;
-    position: relative;
-}
-
-.encabezado__titulo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white; /* Título blanco */
-    text-decoration: none; /* Sin subrayado */
-    transition: color 0.3s ease; /* Transición para color al pasar el mouse */
-}
-
-.encabezado__titulo:hover {
-    color: #ffeb3b; /* Amarillo al pasar el ratón */
-}
-
-.encabezado__subtitulo {
-    font-size: 1.2rem;
-    color: #ffffff;
-    margin-top: 1rem;
-}
-
-.servicios__botones {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.servicio__boton, .encabezado__boton {
-    background-color:var(--color-secundario);
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.servicio__boton:hover, .encabezado__boton:hover {
-    background-color:var(--color-terciario);
-}
-
-.encabezado__boton {
-    background-color:var(--color-terciario);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Si deseas que el botón de contacto se mantenga en la misma fila */
-.encabezado__boton {
-    background-color:var(--color-terciario);
-    color: white;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.encabezado__boton:hover {
-    background-color:var(--color-terciario);
-}
-
-/* Estilo para la sección de Asesoría Inmobiliaria */
-.asesoria {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.asesoria__titulo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.asesoria__descripcion {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 15px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.asesoria__contacto-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.asesoria__contacto-btn:hover {
-    background-color: #f39c12; /* Un color amarillo para el hover */
-}
-
-
-
-
