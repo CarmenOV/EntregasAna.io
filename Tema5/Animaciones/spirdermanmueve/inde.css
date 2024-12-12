@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.cuadradro{
+    width: 400px;
+    height: 400px;
+    margin: 40px auto;
+    background-color: lightblue;
+    overflow: hidden;
+    animation: cuadrado_move 1s 2s ease;  
+     /*hay que ponerle primero el nombre de la animacon lo qu dura el delay si le añasdes infine se mueve todo el rato   */
+
+}
+
+@keyframes cuadrado_move {
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(180deg) scale(1.3);
+    }
+
+    100%{
+        transform: rotate(360deg) scale(1);
+        
+    }
+  
+}
+.spiderman{
+    width: 200px;
+    display: block;
+    margin:0 auto;
+    animation: move_spiderman 5s ease infinite;
+
+}
+/* 
+@keyframes move_spiderman {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(100px);
+    }
+    50%{
+        transform: translateX(200px);
+    }
+    75%{
+        transform: translateX(300px);
+    }
+    100%{
+        transform: translateX(400px);
+    }
+} */
+/* esta es una opcion en la x si le damos los numeros negativos va al otro lado  */
+
+@keyframes move_spiderman {
+    0%{
+        transform: translatey(-50px);
+    }
+    25%{
+        transform: translateY(0) rotate(5deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+    
+}
