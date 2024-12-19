@@ -94,7 +94,6 @@
     }
 }
 
-/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -102,12 +101,10 @@
     font-family: 'BebasNeue';
 }
 
-/* Estilos body */
 body {
     background-image: url("../assets/img/pattern.png");
 }
 
-/* Estilos cabecera */
 .cabecera {
     width: 100%;
     color: white;
@@ -170,14 +167,12 @@ body {
     color: #37bcf9;
 }
 
-/* Estilos contenido principal */
 .contenido {
     width: 80%;
     margin: auto;
     margin-top: 40px;
 }
 
-/* Estilos banner */
 .banner {
     padding: 10px;
     border: 1px solid lightgray;
@@ -211,7 +206,6 @@ body {
     animation: texto-animado 20s linear;
 }
 
-/* Estilos tarjetas de cursos */
 .tarjetas {
     margin-top: 60px;
     display: flex;
@@ -285,7 +279,6 @@ body {
     font-size: 24px;
 }
 
-/* Estilos blog */
 .blog {
     display: flex;
     gap: 5vh;
@@ -296,9 +289,8 @@ body {
     padding: 20px;
 }
 
-/* Estilos articulos */
 .articulos__titulo {
-    background-image: url("../assets/img/pxgray.png");
+    background-image: url("./img/pxgray.png");
     background-size: cover;
     width: 100%;
     text-align: center;
@@ -358,7 +350,6 @@ body {
     font-family: 'Trebuchet';
 }
 
-/* Estilos boton blog */
 .articulos__boton {
     width: 100%;
     height: max-content;
@@ -389,7 +380,7 @@ body {
 .lateral__titulo {
     margin-bottom: 20px;
     width: 100%;
-    background-image: url("../assets/img/pxgray.png");
+    background-image: url("./img/pxgray.png");
     background-size: cover;
     padding: 10px;
     box-shadow: 5px 5px 0 black;
@@ -397,7 +388,6 @@ body {
     font-weight: normal;
 }
 
-/* Estilos barra de busqueda */
 .lateral__busqueda {
     margin-bottom: 40px;
     display: flex;
@@ -424,7 +414,6 @@ body {
     border-radius: 0 5px 5px 0;
 }
 
-/* Estilos del login lateral */
 .lateral__login {
     width: 90%;
     background-color: white;
@@ -445,13 +434,7 @@ body {
     padding: 5px 15px;
 }
 
-/* .login__input:first-of-type::before {
-    content: "";
-    font-family: 'WebSymbols';
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
+
 
 .login__botones {
     display: flex;
@@ -493,7 +476,6 @@ body {
     color: #0373bd;
     text-decoration: underline;
 }
-/* Estilos pie de pagina */
 .pie {
     background-color: #222;
     width: 100%;
@@ -518,7 +500,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* Estilos menu pie */
 .pie__menu ul {
     list-style: none;
     color: white;
@@ -561,12 +542,10 @@ body {
     transform: translateX(20px);
 }
 
-/* Estilos mapa pie */
 .pie__ubicacion iframe {
     border-radius: 5px;
 }
 
-/* Estilos creditos pie */
 .creditos__tecnologias {
     width: 20rem;
     margin: 15px auto;
