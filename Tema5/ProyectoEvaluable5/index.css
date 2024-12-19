@@ -1,0 +1,582 @@
+/* Importaciones de fuentes */
+@font-face {
+    font-family: 'websymbols';
+    src: url("./fonts/fonts/websymbols-regular-webfont.eot");
+    src: url("./fonts/fonts/websymbols-regular-webfont.ttf");
+    src: url("./fonts/fonts/websymbols-regular-webfont.woff");
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url(../assets/fonts/BebasNeue.otf);
+}
+
+@font-face {
+    font-family: 'Trebuchet';
+    src: url(../assets/fonts/TrebuchetMS.ttf);
+}
+
+/* Animaciones */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes top-bottom {
+    from {
+        transform: translateY(-300%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes left-right {
+    from {
+        transform: translateX(-200%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes right-left {
+    from {
+        transform: translateX(200%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        border: 10px solid blue;
+    }
+
+    25% {
+        border: 10px solid greenyellow;
+    }
+
+    50% {
+        border: 10px solid red;
+    }
+
+    75% {
+        border: 10px solid yellow;
+    }
+
+    100% {
+        border: 10px solid blue;
+    }
+}
+
+@keyframes texto-animado {
+    0% {
+        transform: scale(2) translate(-200%);
+        opacity: .7;
+    }
+
+    35% {
+        transform: scale(2) translate(200%);
+        opacity: .7
+    }
+
+    55% {
+        transform: scale(2) translate(-200%);
+        opacity: .1;
+    }
+
+    65% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'BebasNeue';
+}
+
+/* Estilos body */
+body {
+    background-image: url("../assets/img/pattern.png");
+}
+
+/* Estilos cabecera */
+.cabecera {
+    width: 100%;
+    color: white;
+    background-color: #222;
+    padding: 25px;
+    font-family: 'BebasNeue';
+}
+
+.cabecera__contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+.cabecera__logo {
+    overflow: hidden;
+    background-color: #37bcf9;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;;
+    font-size: 1.3rem;
+    gap: 15px;
+    padding: 10px 35px;
+    display: flex;
+}
+
+.cabecera__logo:hover {
+    background-color: gray;
+}
+
+.cabecera__logo:hover h1 {
+    animation: right-left .3s;
+}
+
+.logo__icono {
+    font-family: 'websymbols';
+    font-size: 2.5rem;
+    text-align: center;
+    animation: spin 2s infinite linear;
+}
+
+.cabecera__navegacion ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.cabecera__navegacion ul li {
+    transition: transform .1s linear;
+    cursor: pointer;
+}
+
+.cabecera__navegacion ul li:hover {
+    transform: scale(1.2);
+    color: #37bcf9;
+}
+
+/* Estilos contenido principal */
+.contenido {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+/* Estilos banner */
+.banner {
+    padding: 10px;
+    border: 1px solid lightgray;
+    height: 15vh;
+}
+
+.banner__fondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.banner__texto {
+    text-transform: uppercase;
+    overflow: hidden;
+    text-align: center;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 100%;
+    height: 100%;
+    width: 100%;
+    font-size: 5rem;
+    color: white;
+    animation: texto-animado 20s linear;
+}
+
+/* Estilos tarjetas de cursos */
+.tarjetas {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    font-family: 'BebasNeue';
+    margin-bottom: 40px;
+}
+
+.tarjetas::after {
+    content: "";
+    position: relative;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #222;
+}
+
+.tarjetas__curso {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    width: 230px;
+    height: 380px;
+    background-color: white;
+    border: 1px solid lightgray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
+
+.tarjetas__curso:hover {
+    background-color: #222;
+    color: #0373bd;
+    transition: background .2s linear;
+}
+
+.tarjetas__curso:hover .curso__icono, .tarjetas__curso:hover .curso__titulo {
+    animation: top-bottom .5s;
+}
+
+.tarjetas__curso:hover .curso__icono {
+    font-size: 4rem;
+}
+
+.tarjetas__curso:hover .curso__texto {
+    animation: left-right .5s;
+}
+
+.tarjetas__curso:hover .curso__texto, .tarjetas__curso:hover .curso__titulo {
+    color: white;
+}
+
+.curso__icono {
+    font-family: 'websymbols';
+    font-size: 3rem;
+    margin-top: 15px;
+    transition: font-size .5s;
+}
+
+.curso__titulo {
+    color: #1b558c;
+    font-size: 26px;
+}
+
+.curso__texto {
+    color: #0373bd;
+    font-size: 24px;
+}
+
+/* Estilos blog */
+.blog {
+    display: flex;
+    gap: 5vh;
+}
+
+.blog__articulos {
+    flex-grow: 2;
+    padding: 20px;
+}
+
+/* Estilos articulos */
+.articulos__titulo {
+    background-image: url("../assets/img/pxgray.png");
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: normal;
+    padding: 20px 0;
+    box-shadow: 5px 5px 0 black;
+}
+
+.articulos__entrada {
+    margin: 5vh 0;
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 5px lightgray;
+    position: relative;
+}
+
+
+.articulos__entrada:last-of-type::after {
+    content: "";
+    display: block;
+    position: relative;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-bottom: 3px solid lightgray;
+}
+
+.entrada__titulo {
+    color: #1b558c;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.entrada__texto {
+    padding: 20px 0;
+    font-size: 1.3rem;
+    font-family: 'Trebuchet';
+}
+
+.entrada__info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    gap: 15px;
+    background-color: #222;
+    width: fit-content;
+    padding: 15px 20px;
+    font-size: .8rem;
+    color: white;
+}
+
+.entrada__info p {
+    font-family: 'Trebuchet';
+}
+
+/* Estilos boton blog */
+.articulos__boton {
+    width: 100%;
+    height: max-content;
+    box-shadow: 0 0 5px lightgray;
+    border: 1px solid gray;
+    background-color: white;
+    font-size: 3rem;
+    padding: 30px;
+    color: #1b558c;
+    transition: all .5s linear;
+}
+
+.articulos__boton:hover {
+    border-radius: 150px;
+    background-color: #222;
+    animation: rainbow 20s linear infinite;
+    transition: all .5s linear;
+    color: white;
+}
+
+/* Estilos barra lateral */
+.blog__lateral {
+    flex-grow: 1;
+    padding: 20px;
+    width: 45rem;
+}
+
+.lateral__titulo {
+    margin-bottom: 20px;
+    width: 100%;
+    background-image: url("../assets/img/pxgray.png");
+    background-size: cover;
+    padding: 10px;
+    box-shadow: 5px 5px 0 black;
+    font-size: 2.2rem;
+    font-weight: normal;
+}
+
+/* Estilos barra de busqueda */
+.lateral__busqueda {
+    margin-bottom: 40px;
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+}
+
+.busqueda__input {
+    line-height: 2.5rem;
+    border: none;
+    box-shadow: 0 0 5px gray;
+}
+
+.busqueda__input:first-child {
+    padding-left: 10px;
+    width: 80%;
+    border-radius: 5px 0 0 5px;
+}
+
+.busqueda__input:last-child {
+    width: 20%;
+    font-size: 1.2rem;
+    font-family: 'websymbols';
+    border-radius: 0 5px 5px 0;
+}
+
+/* Estilos del login lateral */
+.lateral__login {
+    width: 90%;
+    background-color: white;
+    padding: 30px 15px;
+    box-shadow: 0 3px 5px gray;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.login__input {
+    position: relative;
+    line-height: 2rem;
+    border: none;
+    box-shadow: 0 0 5px gray inset;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+/* .login__input:first-of-type::before {
+    content: "";
+    font-family: 'WebSymbols';
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+.login__botones {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+}
+
+.login__botones input {
+    border: 1px solid gray;
+    width: 45%;
+    height: 50px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #36aeda;
+    color: white;
+    font-family: 'Trebuchet';
+    transition: box-shadow .1s linear;
+}
+
+.login__botones input:hover {
+    box-shadow: 0 0 5px #0373bd;
+    transition: box-shadow .1s linear;
+}
+
+.login__enlaces {
+    display: flex;
+    flex-direction: column;
+}
+
+.login__enlaces a {
+    font-family: 'Trebuchet';
+    color: black;
+    text-decoration: none;
+}
+
+.login__enlaces a:hover {
+    color: #0373bd;
+    text-decoration: underline;
+}
+/* Estilos pie de pagina */
+.pie {
+    background-color: #222;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding: 30px;
+}
+
+.pie > section {
+    width: 20%;
+}
+
+.pie__titulo {
+    text-align: center;
+    font-size: 2rem;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Estilos menu pie */
+.pie__menu ul {
+    list-style: none;
+    color: white;
+}
+
+.pie__menu ul li {
+    font-size: 2.5rem;
+}
+
+
+.pie__menu ul li a {
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: #0373bd;
+    display: inline-block;
+    transition: transform 0.3s;
+    margin-left: 10px;
+}
+
+.pie__menu ul li div {
+    font-family: 'Trebuchet';
+}
+
+.pie__menu ul li div::after {
+    content: "";
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+.pie__menu ul li:hover div::after {
+    width: 100%;
+}
+
+.pie__menu ul li:hover div a {
+    color: white;
+    transform: translateX(20px);
+}
+
+/* Estilos mapa pie */
+.pie__ubicacion iframe {
+    border-radius: 5px;
+}
+
+/* Estilos creditos pie */
+.creditos__tecnologias {
+    width: 20rem;
+    margin: 15px auto;
+}
+
+.creditos__apps img {
+    width: 3rem;
+    margin: 15px auto;
+}
+
+.creditos__autor {
+    color: white;
+}
